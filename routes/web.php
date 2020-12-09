@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UmController;
+use App\Http\Controllers\UsuariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ use App\Http\Controllers\UmController;
 
 Route::get('/', [UmController::class, 'inicio']);
 
-Route::get('/usuarios', [UmController::class, 'usuarios']);
+//Route::get('/usuarios', [UmController::class, 'usuarios']);
 
 // Route::get('/usuarios', function(){
 //     $usuarios = [
@@ -28,4 +29,6 @@ Route::get('/usuarios', [UmController::class, 'usuarios']);
 //     return view('usuarios', ['nomes' => $usuarios]);
 // });
 
-Route::get('/usuario/{nome}', [UmController::class, 'usuario']);
+//Route::get('/usuario/{nome}', [UmController::class, 'usuario']);
+
+Route::resource('/usuarios', UsuariosController::class);

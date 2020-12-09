@@ -9,7 +9,7 @@
     <h2>Usuários:</h2>
     @foreach($nomes as $nome)
     <ul>
-        <li><a href="usuario/{{$nome}}">{{$nome}}</a></li>
+        <li><a href="usuarios/{{$nome}}">{{$nome}}</a></li>
     </ul>
     @endforeach
 </body>
